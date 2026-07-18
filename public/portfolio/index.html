@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f0e8" />
+    <meta name="description" content="Creative coding, AI tooling, and generative interfaces built for real-time creative control." />
+    <title>Colson Knight — Creative Systems</title>
+    <link rel="stylesheet" href="./styles.css?v=7" />
+    <script src="./script.js?v=7" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"></div>
+        <canvas class="living-canvas" aria-hidden="true"></canvas>
+        <header>
+          <a class="wordmark" href="#top">Colson Knight</a>
+          <nav aria-label="Primary navigation">
+            <a href="#work">Work</a><i>/</i><a href="#experiments">Experiments</a><i>/</i><a href="#about">About</a>
+          </nav>
+        </header>
+        <div class="hero-copy">
+          <p class="eyebrow">Art Director · Creative Technologist</p>
+          <h1 id="hero-title" aria-label="I build creative systems for real-time control.">
+            <span class="kinetic-line" aria-hidden="true"><b class="kinetic-word">I</b> <b class="kinetic-word">build</b></span>
+            <span class="kinetic-line" aria-hidden="true"><b class="kinetic-word">creative</b></span>
+            <span class="kinetic-line" aria-hidden="true"><b class="kinetic-word">systems</b> <b class="kinetic-word">for</b></span>
+            <span class="kinetic-line" aria-hidden="true"><b class="kinetic-word">real-time</b> <b class="kinetic-word">control.</b></span>
+          </h1>
+          <button class="kinetic-trigger" id="scatter-type" type="button">Scatter the type ↗</button>
+          <div class="intro">
+            <p>Creative coding, AI tooling, and generative interfaces built to turn complex technology into expressive, usable systems.</p>
+            <a class="button" href="#work">Explore selected work <span>↓</span></a>
+          </div>
+        </div>
+        <div class="note note-a" aria-hidden="true"><b></b><span>SPECIMEN CK–2405</span><span>X: 842.17 · Y: 371.62</span></div>
+        <div class="note note-b" aria-hidden="true"><b></b><span>ACTIVITY ↑ 0.73</span><span>CLICK TO SEED</span></div>
+        <div class="index" aria-label="Project index">
+          <a href="#project-01"><strong>01</strong><span>NCA Visual Systems</span></a>
+          <a href="#project-02"><strong>02</strong><span>RAW Signal</span></a>
+          <a href="#project-03"><strong>03</strong><span>Mycelia</span></a>
+        </div>
+      </section>
+
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="section-head">
+          <p>Selected work · 2025–26</p>
+          <h2 id="work-title">Systems, not just outputs.</h2>
+          <p>Select a project to see the thinking behind it.</p>
+        </div>
+        <div class="projects">
+          <details class="project green" id="project-01">
+            <summary>
+              <div class="meta"><span>01</span><span>Real-time ML</span><span>2026</span></div>
+              <div class="title"><h3>NCA Visual Systems</h3><i aria-hidden="true"></i></div>
+              <p>A neural cellular automata engine built for expressive, music-responsive image systems at 4K.</p>
+            </summary>
+            <div class="detail"><p>A working research platform connecting trained cellular behaviors, material studies, audio signals, and sequenced parameters. The system turns model behavior into an instrument an art director can perform with—not a one-click effect.</p><ul><li>Swift</li><li>Metal</li><li>PyTorch</li><li>NCA</li></ul></div>
+          </details>
+          <details class="project violet" id="project-02">
+            <summary>
+              <div class="meta"><span>02</span><span>WebGL experiment</span><span>2026</span></div>
+              <div class="title"><h3>RAW Signal</h3><i aria-hidden="true"></i></div>
+              <p>A live browser instrument inspired by corrupting RAW image data through audio-processing workflows.</p>
+            </summary>
+            <div class="detail"><p>The familiar Audacity databending process becomes immediate and reversible: image bytes are mapped to controllable visual signals, with the result updating while parameters move.</p><ul><li>WebGL</li><li>GLSL</li><li>JavaScript</li><li>Signal mapping</li></ul></div>
+          </details>
+          <details class="project coral" id="project-03">
+            <summary>
+              <div class="meta"><span>03</span><span>Generative interface</span><span>2026</span></div>
+              <div class="title"><h3>Mycelia</h3><i aria-hidden="true"></i></div>
+              <p>A living garden interface where language, pointer input, and simple rules become visible growth.</p>
+            </summary>
+            <div class="detail"><p>Text acts as seed data for an evolving cellular world. The project explores how a portfolio can behave like a system—launching immediately, hiding controls until needed, and making every visit slightly different.</p><ul><li>p5.js</li><li>Cellular systems</li><li>Interaction</li><li>Web audio</li></ul></div>
+          </details>
+          <details class="project ink" id="project-04">
+            <summary>
+              <div class="meta"><span>04</span><span>AI creative tool</span><span>2025</span></div>
+              <div class="title"><h3>Sound Entropy</h3><i aria-hidden="true"></i></div>
+              <p>A speech-responsive typography tool that makes syllable emphasis and language structure visible.</p>
+            </summary>
+            <div class="detail"><p>Built from a real communication need, the interface maps voice amplitude and timing into variable type. Words can be frozen, edited, and color-coded to support gestalt language processing without losing the play of live expression.</p><ul><li>Speech input</li><li>Variable type</li><li>AAC</li><li>Prototyping</li></ul></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="experiments" id="experiments" aria-labelledby="experiments-title">
+        <div class="experiments-head">
+          <p>GitHub experiments · Complete index</p>
+          <h2 id="experiments-title">Tools, studies, and working systems.</h2>
+          <p>Thirteen public repositories spanning generative type, simulation, sound, interfaces, and early AI image research.</p>
+        </div>
+        <div class="experiment-grid">
+          <article><span>01 · Sound system</span><h3>Chess Sequencer</h3><p>A Tone.js instrument that translates chess-board structure and moves into a playable musical sequence.</p><div><a href="https://coobytron.github.io/chess_sequencer/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/chess_sequencer" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>02 · Developer tool</span><h3>Git Helper</h3><p>A visual terminal-command builder that turns common Git and GitHub workflows into copy-ready commands.</p><div><a href="https://coobytron.github.io/git-helper/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/git-helper" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>03 · Accessible type</span><h3>StressType</h3><p>A communication experiment designed to help visualize spoken words, emphasis, and stress through expressive typography.</p><div><a href="https://coobytron.github.io/stresstype-app/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/stresstype-app" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>04 · Simulation</span><h3>Diffuse React Simple</h3><p>A compact browser implementation of classic reaction-diffusion pattern formation with real-time controls.</p><div><a href="https://coobytron.github.io/diffuse_react_simple/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/diffuse_react_simple" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>05 · Collection</span><h3>Experiments</h3><p>A shared browser collection of nine small studies in typography, reaction-diffusion, sound, shaders, and motion.</p><div><a href="https://coobytron.github.io/Experiments/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/Experiments" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>06 · Cellular interface</span><h3>NCA Splash</h3><p>A text-seeded Game of Life splash page where portfolio language becomes the deterministic source of a living system.</p><div><a href="https://coobytron.github.io/NCA-Splash/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/NCA-Splash" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>07 · Drawing tool</span><h3>Type Paint</h3><p>A ribbon-painting typography tool inspired by classic Type Space Generator interactions.</p><div><a href="https://coobytron.github.io/type_paint/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/type_paint" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>08 · Early study</span><h3>Splash Page</h3><p>An earlier Mycelia splash-page study combining a bioluminescent WebGL garden with a portfolio introduction.</p><div><a href="https://coobytron.github.io/Splash-Page/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/Splash-Page" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>09 · Generative type</span><h3>Balloon-Type Field</h3><p>A p5.js Gray–Scott reaction-diffusion system seeded by glyphs, with growth, palette, and export controls.</p><div><a href="https://coobytron.github.io/balloon-type-field/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/balloon-type-field" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>10 · Generative interface</span><h3>Mycelia</h3><p>A standalone WebGL mushroom garden that turns a portfolio entrance into an evolving, controllable environment.</p><div><a href="https://coobytron.github.io/mycelia-splash/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/mycelia-splash" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>11 · Physics typography</span><h3>Kinetic Type</h3><p>A browser typography lab for dragging, flinging, pinning, and exporting words under gravity, wind, and fan forces.</p><div><a href="https://coobytron.github.io/kinetic-type/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/kinetic-type" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>12 · AI image research</span><h3>DeepDream</h3><p>A notebook-based exploration of neural-network image synthesis based on the original Inceptionism research code.</p><div><span class="unavailable">Notebook project</span><a href="https://github.com/coobytron/deepdream" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+          <article><span>13 · Generative type</span><h3>Letterform Gen</h3><p>A typographic reaction-diffusion study exploring how letter shapes can seed and contain evolving patterns.</p><div><a href="https://coobytron.github.io/letterform_gen/" target="_blank" rel="noreferrer">Open live ↗</a><a href="https://github.com/coobytron/letterform_gen" target="_blank" rel="noreferrer">GitHub ↗</a></div></article>
+        </div>
+      </section>
+
+      <section class="about" id="approach" aria-labelledby="approach-title">
+        <div class="about-head"><p>Approach</p><h2 id="approach-title">I use AI to build instruments for creative direction.</h2></div>
+        <div class="principles">
+          <article><span>01</span><h3>Make it controllable</h3><p>The best generative systems expose meaningful decisions instead of hiding them behind a prompt.</p></article>
+          <article><span>02</span><h3>Design in real time</h3><p>Fast feedback makes technology feel like a material—something to push, tune, perform, and discover with.</p></article>
+          <article><span>03</span><h3>Build from real needs</h3><p>Tools become useful when technical possibility is shaped around a person, a workflow, or a communication problem.</p></article>
+        </div>
+        <div class="about-close" id="about">
+          <p>Hi, I’m Colson—an Art Director exploring custom visual systems, generative interfaces, and design tools built for real-time creative control.</p>
+          <a href="https://github.com/coobytron" target="_blank" rel="noreferrer">Explore the experiments on GitHub <span>→</span></a>
+        </div>
+      </section>
+      <footer><span>Colson Knight · Creative Systems</span><span>Claremont, California · 2026</span><a href="#top">Back to top ↑</a></footer>
+    </main>
+  </body>
+</html>

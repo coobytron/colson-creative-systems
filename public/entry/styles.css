@@ -1,0 +1,13 @@
+:root { color-scheme: dark; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+* { box-sizing: border-box; }
+html, body, #experience { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #04080a; }
+.layer { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; transition: opacity .7s ease; }
+.mycelia { z-index: 1; }
+.entry-ui { position: fixed; left: clamp(20px, 4vw, 58px); top: clamp(18px, 3vw, 40px); z-index: 4; color: #f2fffd; pointer-events:none; }
+.entry-ui span { font-size: 13px; font-style: italic; letter-spacing: .02em; text-shadow: 0 2px 14px #000; }
+button, .fallback { appearance: none; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; background: rgba(4,8,10,.54); color: #fff; padding: 11px 17px; font: 650 14px/1 "Helvetica Neue", Helvetica, Arial, sans-serif; cursor: pointer; backdrop-filter: blur(14px); transition: background .2s ease, color .2s ease, transform .2s ease; }
+button:hover, button:focus-visible { background: #f4efe5; color: #111; transform: translateY(-2px); outline: none; }
+button i { margin-left: 8px; font-style: normal; }
+.fallback { position: fixed; z-index: 5; left: 20px; bottom: 20px; text-decoration: none; }
+@media (max-width: 640px) { .entry-ui { align-items: flex-start; } .entry-ui span { max-width: 120px; } button { font-size: 15px; } }
+@media (prefers-reduced-motion: reduce) { .layer, .entry-ui { transition-duration: .01ms; } }
