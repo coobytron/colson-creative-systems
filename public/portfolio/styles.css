@@ -47,7 +47,7 @@ header,.eyebrow,.button,.index a,.section-head p,.meta,.about-head>p,.about-clos
 .hero-copy{width:min(1180px,88vw)}
 .hero h1{max-width:1180px}
 .kinetic-word{position:relative;z-index:1;pointer-events:auto;user-select:none;-webkit-user-select:none}
-.kinetic-letter{display:inline-block;will-change:transform;pointer-events:auto;transition:color .14s ease}
+.hero h1 .kinetic-letter{display:inline-block;width:auto;max-width:none;will-change:transform;pointer-events:auto;transition:color .14s ease}
 .kinetic-letter:hover{color:#ff5a24}
 .kinetic-trigger{position:absolute;z-index:6;top:clamp(72px,8vh,105px);right:0;appearance:none;padding:9px 13px;border:1px solid rgba(17,17,17,.38);border-radius:999px;background:transparent;color:var(--ink);font:650 11px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;cursor:pointer;pointer-events:auto;transition:color .18s ease,background .18s ease,transform .18s ease}
 .kinetic-trigger:hover,.kinetic-trigger:focus-visible{color:#fff;background:#111;transform:translateY(-2px);outline:none}
