@@ -1,55 +1,4 @@
 (() => {
-  const work = [
-    {
-      number: "01",
-      title: "NCA Visual Systems",
-      indexMeta: "Real-time ML / Swift + Metal / 2026",
-      description: "A neural cellular automata engine for expressive, music-responsive image systems at 4K.",
-      role: "Art direction + tool design",
-      medium: "Swift / Metal / PyTorch",
-      year: "2026",
-      mode: "nca",
-      notes: "#nca-visual-systems",
-    },
-    {
-      number: "02",
-      title: "RAW Signal",
-      indexMeta: "Databending instrument / WebGL / 2026",
-      description: "A live browser instrument that turns destructive RAW-image databending into an immediate, reversible visual process.",
-      role: "Concept + interaction design",
-      medium: "WebGL / GLSL / JavaScript",
-      year: "2026",
-      mode: "raw",
-      notes: "#raw-signal",
-    },
-    {
-      number: "03",
-      title: "Mycelia",
-      indexMeta: "Living interface / WebGL + p5.js / 2026",
-      description: "A living garden where language, pointer input, and simple rules become visible growth.",
-      role: "Art direction + creative code",
-      medium: "WebGL / p5.js / cellular systems",
-      year: "2026",
-      mode: "mycelia",
-      notes: "#mycelia",
-      live: "https://coobytron.github.io/mycelia-splash/",
-      source: "https://github.com/coobytron/mycelia-splash",
-    },
-    {
-      number: "04",
-      title: "Sound Entropy",
-      indexMeta: "Speech-responsive type / AAC / 2025",
-      description: "A speech-responsive typography tool that makes syllable emphasis and language structure visible.",
-      role: "Product + interaction design",
-      medium: "Speech input / variable type / AAC",
-      year: "2025",
-      mode: "type",
-      notes: "#sound-entropy",
-      live: "https://coobytron.github.io/stresstype-app/",
-      source: "https://github.com/coobytron/stresstype-app",
-    },
-  ];
-
   const experiments = [
     { number: "01", title: "Chess Sequencer", indexMeta: "Sound system / Tone.js", description: "Chess structure translated into a playable musical sequence.", role: "Creative coding", medium: "Tone.js / JavaScript", year: "2026", mode: "chess", live: "https://coobytron.github.io/chess_sequencer/", source: "https://github.com/coobytron/chess_sequencer" },
     { number: "02", title: "Git Helper", indexMeta: "Developer tool / interface", description: "A visual builder for common Git and GitHub terminal workflows.", role: "Product design + code", medium: "HTML / CSS / JavaScript", year: "2026", mode: "terminal", live: "https://coobytron.github.io/git-helper/", source: "https://github.com/coobytron/git-helper" },
@@ -69,7 +18,6 @@
   const canvas = document.querySelector("#system-canvas");
   const context = canvas?.getContext("2d");
   const index = document.querySelector("#project-index");
-  const tabs = [...document.querySelectorAll(".mode-switch button")];
   const title = document.querySelector("#active-title");
   const description = document.querySelector("#active-description");
   const status = document.querySelector("#active-status");
@@ -79,16 +27,13 @@
   if (!canvas || !context || !index || !parameter) return;
 
   const finePointer = matchMedia("(hover: hover) and (pointer: fine)");
-  let currentMode = "work";
-  let current = work[0];
-  let selectedIndex = 0;
+  let current = experiments[0];
   let width = 1;
   let height = 1;
   let point = { x: 0.58, y: 0.42 };
   let dragging = false;
   let resetTimer = 0;
 
-  const currentList = () => (currentMode === "work" ? work : experiments);
   const clamp = (value, minimum = 0, maximum = 1) => Math.max(minimum, Math.min(maximum, value));
   const hash = (text) => [...text].reduce((value, character) => (value * 31 + character.charCodeAt(0)) >>> 0, 2166136261);
   const randomFrom = (seed) => {
@@ -329,7 +274,6 @@
 
   function updatePreview(item, itemIndex, focusRow = false) {
     current = item;
-    selectedIndex = itemIndex;
     point = { x: 0.58, y: 0.42 };
     parameter.value = "58";
     title.textContent = item.title;
@@ -338,8 +282,7 @@
     canvas.setAttribute("aria-label", `Interactive preview of ${item.title}`);
     meta.innerHTML = `<div><dt>Role</dt><dd>${item.role}</dd></div><div><dt>Medium</dt><dd>${item.medium}</dd></div><div><dt>Year</dt><dd>${item.year}</dd></div>`;
     links.replaceChildren();
-    appendLink(currentMode === "work" ? "Project notes ↓" : "Open live ↗", item.notes || item.live);
-    if (currentMode === "work" && item.live) appendLink("Open live ↗", item.live);
+    appendLink("Open live ↗", item.live);
     appendLink("Source ↗", item.source);
     [...index.querySelectorAll(".index-row")].forEach((row, rowIndex) => {
       row.classList.toggle("is-active", rowIndex === itemIndex);
@@ -349,9 +292,8 @@
     if (focusRow) index.querySelectorAll(".index-row")[itemIndex]?.focus();
   }
 
-  function buildIndex(mode) {
-    currentMode = mode;
-    const data = currentList();
+  function buildIndex() {
+    const data = experiments;
     index.replaceChildren();
     data.forEach((item, itemIndex) => {
       const row = document.createElement("button");
@@ -373,15 +315,6 @@
     });
     updatePreview(data[0], 0);
   }
-
-  tabs.forEach((tab) => tab.addEventListener("click", () => {
-    tabs.forEach((candidate) => {
-      const active = candidate === tab;
-      candidate.classList.toggle("is-active", active);
-      candidate.setAttribute("aria-selected", active ? "true" : "false");
-    });
-    buildIndex(tab.dataset.mode);
-  }));
 
   function positionFromEvent(event) {
     const rect = canvas.getBoundingClientRect();
@@ -415,15 +348,6 @@
     render();
   });
 
-  document.querySelectorAll(".brief-list details").forEach((detail) => {
-    detail.addEventListener("toggle", () => {
-      if (!detail.open) return;
-      document.querySelectorAll(".brief-list details[open]").forEach((other) => {
-        if (other !== detail) other.open = false;
-      });
-    });
-  });
-
   new ResizeObserver(resize).observe(canvas);
-  buildIndex("work");
+  buildIndex();
 })();

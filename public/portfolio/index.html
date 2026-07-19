@@ -18,7 +18,7 @@
     <header class="site-header">
       <a class="identity" href="#top">Colson Knight <span>— Art Direction + Creative Systems</span></a>
       <nav aria-label="Primary navigation">
-        <a href="#work">Work</a>
+        <a href="#index">Index</a>
         <a href="#experiments">Experiments</a>
         <a href="#private-work">Private work <span aria-hidden="true">↗</span></a>
         <a href="#about">About</a>
@@ -26,7 +26,7 @@
     </header>
 
     <main id="top">
-      <section class="living-index" id="work" aria-labelledby="practice-title">
+      <section class="living-index" id="index" aria-labelledby="practice-title">
         <aside class="practice-panel">
           <div class="practice-intro">
             <p class="kicker">Independent practice / 2025—26</p>
@@ -36,33 +36,26 @@
             </p>
           </div>
 
-          <div class="mode-switch" role="tablist" aria-label="Project index mode">
-            <button id="work-tab" class="is-active" type="button" role="tab" aria-selected="true" data-mode="work">
-              Selected work <span>04</span>
-            </button>
-            <button id="experiments-tab" type="button" role="tab" aria-selected="false" data-mode="experiments">
-              Experiments <span>13</span>
-            </button>
-          </div>
+          <p class="index-label">Experiments <span>13 public systems</span></p>
 
           <div class="project-index" id="project-index" aria-live="polite"></div>
         </aside>
 
         <section class="project-preview" aria-labelledby="active-title">
-          <canvas id="system-canvas" role="img" aria-label="Interactive preview of NCA Visual Systems"></canvas>
+          <canvas id="system-canvas" role="img" aria-label="Interactive preview of Chess Sequencer"></canvas>
           <div class="preview-topline">
             <span id="active-status">01 / Active system</span>
             <span class="interaction-hint">Drag to direct the image</span>
           </div>
           <div class="preview-scrim" aria-hidden="true"></div>
           <div class="preview-copy">
-            <h2 id="active-title">NCA Visual Systems</h2>
-            <p id="active-description">A neural cellular automata engine for expressive, music-responsive image systems at 4K.</p>
+            <h2 id="active-title">Chess Sequencer</h2>
+            <p id="active-description">Chess structure translated into a playable musical sequence.</p>
             <div class="preview-links" id="active-links"></div>
           </div>
           <dl class="preview-meta" id="active-meta">
-            <div><dt>Role</dt><dd>Art direction + tool design</dd></div>
-            <div><dt>Medium</dt><dd>Swift / Metal / PyTorch</dd></div>
+            <div><dt>Role</dt><dd>Creative coding</dd></div>
+            <div><dt>Medium</dt><dd>Tone.js / JavaScript</dd></div>
             <div><dt>Year</dt><dd>2026</dd></div>
           </dl>
           <label class="parameter-control" for="preview-parameter">
@@ -70,53 +63,6 @@
             <input id="preview-parameter" type="range" min="0" max="100" value="58" />
           </label>
         </section>
-      </section>
-
-      <section class="work-notes" id="project-briefs" aria-labelledby="work-notes-title">
-        <header class="section-heading">
-          <p>Selected work / project notes</p>
-          <h2 id="work-notes-title">Four systems.<br />Four ways to take control.</h2>
-          <p>Open a row for the thinking behind the tool. Full case studies can replace these notes as the work becomes public.</p>
-        </header>
-
-        <div class="brief-list">
-          <details id="nca-visual-systems">
-            <summary>
-              <span>01</span><h3>NCA Visual Systems</h3><p>Real-time ML / Swift + Metal / 2026</p><i aria-hidden="true">+</i>
-            </summary>
-            <div class="brief-detail">
-              <p>A research platform that connects trained cellular behaviors, material studies, audio signals, and sequenced parameters. The model becomes an instrument an art director can perform with—not a one-click effect.</p>
-              <ul><li>Art direction</li><li>System design</li><li>Realtime ML</li><li>4K output</li></ul>
-            </div>
-          </details>
-          <details id="raw-signal">
-            <summary>
-              <span>02</span><h3>RAW Signal</h3><p>Databending instrument / WebGL / 2026</p><i aria-hidden="true">+</i>
-            </summary>
-            <div class="brief-detail">
-              <p>The familiar Audacity databending process becomes immediate and reversible: image bytes are mapped to controllable visual signals, with the result updating while parameters move.</p>
-              <ul><li>Creative coding</li><li>WebGL</li><li>GLSL</li><li>Signal mapping</li></ul>
-            </div>
-          </details>
-          <details id="mycelia">
-            <summary>
-              <span>03</span><h3>Mycelia</h3><p>Living interface / WebGL + p5.js / 2026</p><i aria-hidden="true">+</i>
-            </summary>
-            <div class="brief-detail">
-              <p>Language and pointer input become seed data for an evolving cellular world. The interface launches directly into the garden and keeps its controls secondary to the experience.</p>
-              <ul><li>Interaction design</li><li>Cellular systems</li><li>WebGL</li><li>Generative world</li></ul>
-            </div>
-          </details>
-          <details id="sound-entropy">
-            <summary>
-              <span>04</span><h3>Sound Entropy</h3><p>Speech-responsive type / AAC / 2025</p><i aria-hidden="true">+</i>
-            </summary>
-            <div class="brief-detail">
-              <p>Built from a real communication need, the interface maps voice amplitude and timing into variable type. Words can be frozen, edited, and color-coded to support gestalt language processing.</p>
-              <ul><li>Product thinking</li><li>Speech input</li><li>Variable type</li><li>Accessibility</li></ul>
-            </div>
-          </details>
-        </div>
       </section>
 
       <section class="experiments" id="experiments" aria-labelledby="experiments-title">
@@ -146,7 +92,7 @@
       <section class="private-work" id="private-work" aria-labelledby="private-title">
         <div>
           <p>Private work / access by request</p>
-          <h2 id="private-title">Selected art direction and client systems live in a separate archive.</h2>
+          <h2 id="private-title">Client art direction and private systems live in a separate archive.</h2>
         </div>
         <p>No client names or protected material are exposed here. This route is ready to become the password-protected portfolio when the work is cleared.</p>
       </section>
