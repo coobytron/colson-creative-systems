@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Colson Knight — Creative Systems",
+  title: "Colson Knight — Art Direction + Creative Systems",
   description:
-    "Creative coding, AI tooling, and generative interfaces built for real-time creative control.",
+    "Visual systems, creative tools, and real-time experiments built to be played, tuned, and directed.",
   other: { "codex-preview": "development" },
 };
 
